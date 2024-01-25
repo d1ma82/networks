@@ -34,7 +34,8 @@ namespace {
 
     void clear () {
 
-        if (client) { delete client; client=nullptr; }
+        delete client; 
+        client=nullptr;
     }
 }
 

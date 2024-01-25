@@ -27,7 +27,8 @@ namespace {
 
     void clear () {
 
-        if (server) { delete server; server = nullptr; }
+        delete server;
+        server = nullptr;
     }
 }
 
