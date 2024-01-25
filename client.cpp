@@ -6,7 +6,7 @@
 namespace {
     int result = 0;
     TCPClient* client = nullptr;
-    std::chrono::milliseconds period;
+    std::chrono::seconds period;
 
     class InvalidUseException: public std::exception {};
 
@@ -17,7 +17,7 @@ namespace {
         std::string name    = argv[1];
         int port            = std::stoi(argv[2]);
         int period_seconds  = std::stoi(argv[3]);
-        period = std::chrono::milliseconds(period_seconds*1000);
+        period = std::chrono::seconds(period_seconds);
         client = new TCPClient(name, port);
     }
 
