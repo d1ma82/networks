@@ -163,6 +163,11 @@ public:
         }
         std::cout << "Ожидание подключений..." << std::endl;
     }
+    
+    TCPServer (const TCPServer& other) = delete;
+    TCPServer (TCPServer&& other) = delete;
+    TCPServer& operator = (const TCPServer& other) = delete;
+    TCPServer& operator = (TCPServer&& other) = delete;
 
     ~TCPServer() { 
 
